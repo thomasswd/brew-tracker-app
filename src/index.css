@@ -1,0 +1,632 @@
+:root {
+  --primary-color: rgb(143, 20, 2);
+  --primary-color-alt: rgb(172, 49, 30);
+  --secondary-color: rgb(204, 162, 24);
+  --secondary-color-alt: rgb(226, 173, 0);
+  --tertiary-color: rgb(255, 255, 228);
+  --accent-color: rgb(177, 114, 97);
+  --accent-color-alt: rgb(180, 78, 50);
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 10px;
+  overflow: scroll;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: inherit;
+}
+
+body {
+
+}
+
+.main {
+  font-family: 'Roboto', sans-serif;
+  height: auto;
+}
+
+.main-container {
+  padding: 3rem 0 3rem 0;
+  background-color: rgba(255, 255, 228, 0.95);
+  border-radius: 20px;
+  height: 100%;
+  z-index: 1;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.app-header {
+  margin: auto;
+  z-index: 1;
+}
+
+.app-header-title {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--primary-color);
+  font-family: 'Fredoka One', cursive;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--secondary-color);
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.brew-timer {
+  width: 35%;
+  display:flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.hero {
+  overflow: hidden;
+  padding: 3rem 0;
+}
+
+.coffee-form {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.timer-font {
+  font-family: 'Fredoka One', cursive;
+  color: var(--primary-color);
+  font-size: 8rem;
+}
+
+.pour-count {
+  color: var(--secondary-color);
+  font-weight: 800;
+}
+
+.setup {
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+}
+
+.coffee-form > * {
+  margin-bottom: 1rem;
+}
+
+.select-list {
+  border: none;
+  background: var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.select-list > option {
+  border: none;
+}
+
+button {
+  outline: none;
+}
+
+button:active {
+  outline:none;
+}
+
+.mode-button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 7px 30px -10px rgba(0,0,0, 0.6);
+  outline: none;
+}
+
+.mode-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 33px -8px rgba(0,0,0, 0.6);
+}
+
+.mode-button:active {
+  transform: translateY(0px);
+  box-shadow: 0 7px 30px -10px rgba(0,0,0, 0.6);
+  background: var(--secondary-color-alt);
+}
+
+.button-container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.primary-button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.primary-button:hover {
+  background: var(--secondary-color-alt)
+}
+
+.secondary-button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  /* transition: all 0.5s; */
+}
+
+.secondary-button:hover {
+  background: var(--accent-color-alt);
+}
+
+.nextPourButton {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nextPourButton:active {
+  background: var(--secondary-color-alt);
+}
+
+.visibility {
+  visibility: visible;
+}
+
+.no-visibility {
+  visibility: hidden;
+}
+
+.isVisible {
+  /* visibility: visible; */
+  display: block;
+}
+
+.notVisible {
+  /* visibility: hidden; */
+  display: none;
+}
+
+.show {
+  display: block
+}
+
+.no-show {
+  display: block;
+}
+
+/* this only displays when screen is shrunk */
+.modal-display {
+  display: none;
+}
+
+.backgrounds {
+  display: none;
+}
+
+.setting-container {
+  width: 50%;
+}
+
+.new-setting {
+  width: 100%;
+  padding: 1rem;
+}
+
+.new-setting-form {
+  display:flex;
+  flex-direction: column;
+}
+
+.new-setting-form>* {
+  margin-bottom: 1rem;
+}
+
+.new-setting-info {
+  padding: 1rem;
+}
+
+.new-setting-modals {
+  display: none;
+}
+
+.current-settings {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.current-settings p, .current-settings h2 {
+  margin-bottom: 2rem;
+}
+
+.try-button {
+  margin-bottom: 2rem;
+}
+
+.prompt {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  width: 75%;
+  color: var(--primary-color);
+  font-size: 2rem;
+  height: 20rem;
+  padding: 3rem 0;
+}
+
+.prompt-text {
+  height: 100%;
+  text-align: center;
+  line-height: 2;
+}
+
+.prompt-count {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.prompt-time {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.prompt-pour-container {
+  height: 20rem;
+  text-align: center;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting {
+  /* height: 90%; */
+  height: 100vh;
+  width: 50%;
+  padding: 1rem;
+  overflow: scroll;
+  position: relative;
+}
+
+.setting::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.primary-text {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.setting-modules {
+  display:flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 1rem 0;
+}
+
+.setting-header {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid var(--secondary-color)
+}
+
+.setting-label {
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.setting-input {
+  padding: 1rem 1rem;
+  border:none;
+  border-radius: 10px;
+  background: var(--accent-color);
+  color: white;
+}
+
+.setting-input::placeholder {
+  color: rgba(255, 255, 255, 50%);
+}
+
+.setting-input::active {
+  border:none;
+}
+
+.coffee-grind {
+  -webkit-appearance: none;
+}
+
+.coffee-grind:active, .coffee-grind:focus {
+  outline: none;
+}
+
+.coffee-grind::-webkit-slider-runnable-track {
+  background: var(--accent-color);
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  height: 8px;
+}
+
+.coffee-grind::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--secondary-color-alt);
+  margin-top: -5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  transition: all 0.2s;
+  cursor: grab;
+}
+
+.user {
+  /* position: absolute;
+  transform: translateY(-2rem); */
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+.login-page {
+  width: 50%;
+}
+
+.logInInfo {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.user-email {
+  position:absolute;
+  font-weight: 800;
+  font-size: 2rem;
+  transform: translateY(-5px) translateX(5px);
+}
+
+.user-info-label {
+  font-size: 2rem;
+  font-weight: 700;
+  
+}
+
+.user-info-input {
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.user-prompt>:first-child{
+  margin-right: 2rem;
+}
+
+.login-button {
+  margin-bottom: 2rem;
+}
+
+.button-bottom-margin {
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  border: 3px solid black;
+  border-radius: 10px;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.setting-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+
+/* @media (min-width: 770px) {
+  .no-show {
+    visibility: hidden;
+  }
+} */
+
+@media (max-width: 1250px) {
+  .main-container {
+    max-width: 100%;
+    min-width: 100%;
+    height: fit-content;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1025px) {
+  html{
+    font-size: 8px;
+  }
+  .main-container {
+    height: 100vh;
+    overflow: scroll;
+  }
+  .new-setting {
+    min-width: 100%
+  }
+}
+
+@media (max-width: 769px) {
+  html{
+    font-size: 9px;
+  }
+  .main-container {
+    height: 100vh;
+    width: 100vw;
+    position:relative;
+    overflow: scroll;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  } 
+  .setup {
+    flex-direction: column;
+    max-width: 50%;
+    /* position:relative; */
+  }
+  .setting-container {
+    width: 100%;
+  }
+  .new-setting-modals {
+    display: block;
+  }
+  /* .current-settings {
+    min-width: 100%;
+  } */
+  .brew-timer {
+      width: 50%;
+  }
+  .hero {
+    width: 100%;
+  }
+  .new-setting {
+    min-width: 100%;
+  }
+  .new-setting-info {
+    width: 100%;
+  }
+  .new-log {
+    /* position: relative; */
+  }
+  .modal-container {
+    width: 100vw;
+    height: 100vh; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .new-setting-form {
+    background: rgb(255, 255, 228);
+    padding: 2rem;
+    border-radius: 10px;
+  
+  }
+  .new-setting-modals {
+    margin-bottom: 2rem;
+    display:flex;
+    justify-content: space-evenly;
+  }
+
+  .setting, .login-page, .signup-page {
+    min-width: 100vw;
+    height: 100vh;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .setting.show {
+    transition: all 0.5s;
+  }
+
+  .setting-inner, .login-page-container, .signup-page-container {
+    background: rgb(255, 255, 228);
+    padding: 2rem;
+    border-radius: 10px;
+    height: 75%; 
+    overflow: scroll;
+  }
+
+  .current-settings h2 {
+    text-align:center;
+  }
+
+  .prompt {
+    width: 100%;
+  }
+
+  /* this is set to display:block normally and changes when screen is shrunk */
+  .no-show {
+    display: none;
+  }
+
+  .display {
+    display: block;
+  }
+
+  .no-display {
+    display: none;
+  }
+
+  .modal-display {
+    display: block;
+  }
+
+  .close-modal {
+    font-size: 4rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 481px) {
+  .main-container {
+    height: fit-content;
+  }
+  .app-header-title {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--secondary-color);
+    width: 30%;
+  }
+  .setup {
+    max-width: 100%;
+  }
+  .brew-timer {
+    width: 100%;
+  }
+  .prompt {
+    height: min-content;
+    width: 80%;
+    padding: 2rem 0;
+  }
+}
